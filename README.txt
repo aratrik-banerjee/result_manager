@@ -3,6 +3,8 @@ Download and put all the folders in a single folder and run "main.py"
 Hierarchy:
 <Top folder>
   -> files
+    ->Available.txt
+    ->temp.txt
   -> images  
   -> main.py
   
