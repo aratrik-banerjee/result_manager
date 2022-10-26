@@ -32,9 +32,9 @@ subart3=['English','Geography','History','Hindi/Beng','Physical Education']
 
 #blank
 subject=[]
-
 pa1f=[]
-def fresult():    
+
+def fresult():                                #printing of the final report
     global pa1,pa1f,pa2,pa2f,hylt,hylp,hylf,ft,fp,ftf,subject,grd,point,cgpa,prctg,roll,cls,section
     rslt=open('files/Class_'+str(cls)+'_'+str(section)+'.txt','r')
     rslt.seek(0)
@@ -134,13 +134,13 @@ def fresult():
         r+=1
 
     c=Label(result,text='CGPA: '+str(cgpa),font=('Ariel Black',15),bg='#4863A0',fg="white",pady=5,padx=20)
-    c.grid(row=22,column=0,sticky='w')
+    c.grid(row=22,column=0,sticky='w')           #CGPA
 
     p=Label(result,text='Percentage: '+str(prctg)+' %',font=('Ariel Black',15),bg='#4863A0',fg="white",pady=5,padx=20)
-    p.grid(row=23,column=0,sticky='w')
+    p.grid(row=23,column=0,sticky='w')           #Percentage
 
     sts=''
-    if prctg<=33.0:
+    if prctg<=33.0:                              #pass fail status
         sts='FAILED'
     else:
         sts='PASSED'
@@ -152,7 +152,7 @@ def fresult():
         result.destroy()
     b1=Button(result,text='OK',cursor='hand2',command=qit,width=30,bg='#98AFC7').grid(row=25,column=0,columnspan=8)
 
-def detail():               #taking details
+def detail():                                   #taking details
     name_var=StringVar()
     cls_var=IntVar()
     roll_var=IntVar()
@@ -163,7 +163,7 @@ def detail():               #taking details
     section_var.set("")
     
     
-    def subject():              #taking subject
+    def subject():                              #taking subject
         global name,cls,roll,section,subject
         name=name_var.get()
         cls=cls_var.get()
@@ -171,7 +171,7 @@ def detail():               #taking details
         section=section_var.get()
         
 
-        def sci():          #for science stream  
+        def sci():                              #for science stream  
             var=IntVar()
             sci=Toplevel(root)
             sci.config(pady=10,bg='#4863A0')
@@ -235,7 +235,7 @@ def detail():               #taking details
             
             
             
-        def cmrs():             #for commerce stream
+        def cmrs():                             #for commerce stream
             var=IntVar()
             com=Toplevel(root)
             com.config(pady=10,bg='#4863A0')
@@ -290,7 +290,7 @@ def detail():               #taking details
             cm3=Radiobutton(com,text=s3,pady=10,variable=var,cursor='hand2',value=3,bg='#4863A0', command=sub,font=('Segoe Print',20),fg='white')
             cm3.grid(row=5,column=1,sticky='W')
             
-        def arts():        #for arts stream
+        def arts():                             #for arts stream
             var=IntVar()
             art=Toplevel(root)
             art.config(pady=10,bg='#4863A0')
@@ -336,7 +336,7 @@ def detail():               #taking details
                 stream.destroy()
                 form()
                 
-
+            #radio buttons to choose subject
                 
             ar1=Radiobutton(art,text=s1,pady=10,variable=var,cursor='hand2',value=1,bg='#4863A0', command=sub,font=('Segoe Print',20),fg='white')
             ar1.grid(row=3,column=1,sticky='W')
@@ -346,24 +346,8 @@ def detail():               #taking details
             ar3.grid(row=5,column=1,sticky='W')
 
         
-        if (cls>10) and (cls<13) :
-            x=open('files/Available.txt','a+')
-            x.close
-            avl=open('files/Available.txt','r')
-            x=avl.read()
-            if 'files/Class_'+str(cls)+'_'+section+"Roll No: "+str(roll) in x:
-                err=Toplevel(root)
-                err.config(bg='#4863A0')
-                root.eval(f'tk::PlaceWindow {str(err)} center')
-                msg=('Result of Roll No: '+str(roll)+(' already exists\nUse "View Results" to see existing result.\nUse "Delete Result" to delete existing result before re-issuing Result.'))
-                l1=Label(err,text=msg,justify='left',padx=10,pady=10,font=('Times New Roman',15),fg='white',bg='#4863A0')
-                l1.pack()
-                def qt():
-                    err.destroy()
-                ext=Button(err,text='OK',padx=10,pady=5,command=qt,cursor='hand2',bg='#98AFC7',bd=5,font=('Times New Roman',10),width=20)        
-                ext.pack()
-
-            else:
+        if (cls>10) and (cls<13) :                              #checking if result already exists BEFORE OPENING FORM
+            if (check()):                                               #new result <if doesn't exists>
                 stream=Toplevel(root)
                 stream.attributes('-fullscreen', True)
                 stream.config(pady=10,bg='#4863A0')
@@ -387,11 +371,11 @@ def detail():               #taking details
                 art=Button(stream,text="ARTS",cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',18),width=40, command=arts)
                 art.grid(row=7,column=1)    
 
-        elif (cls<11) and (cls>5):
+        elif (cls<11) and (cls>5): 
             subject=sub6to10
             detail.destroy()
             form()
-            
+                                                #both redirects to form
             
         elif (cls<6) and (cls>0):
             subject=sub1to5
@@ -402,7 +386,7 @@ def detail():               #taking details
 
         
         
-    detail=Toplevel(root)
+    detail=Toplevel(root)                                   #taking details of student
     detail.attributes('-fullscreen', True)
     detail.config(pady=10,bg='#4863A0')
     imge=PhotoImage(file='images/student.png')
@@ -418,34 +402,34 @@ def detail():               #taking details
     button_1=Button(detail,image=img1,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)
     button_1.grid(row=4,column=0,sticky='W',padx=50)
     
-    Name=Label(detail,text='Name',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=6,column=1)
+    Name=Label(detail,text='Name',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=6,column=1)                                     #name
     e1=Entry(detail,textvariable = name_var,font=(15),bg='#98AFC7',bd=5).grid(row=6,column=2,ipady=5)
     
     
-    Class=Label(detail,text='Class',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=7,column=1)
+    Class=Label(detail,text='Class',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=7,column=1)                                   #class
     e2=Entry(detail,textvariable = cls_var,font=(15),bg='#98AFC7',bd=5).grid(row=7,column=2,ipady=5)
     
-    Roll_No=Label(detail,text='Roll No.',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=8,column=1)
+    Roll_No=Label(detail,text='Roll No.',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=8,column=1)                              #roll
     e3=Entry(detail,textvariable = roll_var,font=(15),bg='#98AFC7',bd=5).grid(row=8,column=2,ipady=5)
 
-    Section=Label(detail,text='Section',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=9,column=1)
+    Section=Label(detail,text='Section',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=9,column=1)                               #section
     e4=Entry(detail,textvariable = section_var,font=(15),bg='#98AFC7',bd=5).grid(row=9,column=2,ipady=5)
 
     gp=Label(detail,bg='#4863A0',pady=20).grid(row=10,column=0)
 
-    button_4=Button(detail,text='Submit',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40, command=subject)
+    button_4=Button(detail,text='Submit',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40, command=subject)   #goes to subject
     button_4.grid(row=11,column=1,columnspan=2)
     
 
     
 
 
-def delete():
+def delete():           #delete result
     opt=Toplevel(root,padx=30,pady=30)
     opt.attributes('-fullscreen', True)
     opt.config(pady=10,bg='#4863A0')
 
-    def cls():
+    def cls():          #delete class-wise
         global cls,roll,section
         clas=Toplevel(root)
         clas.attributes('-fullscreen', True)
@@ -473,6 +457,7 @@ def delete():
         gp=Label(clas,bg='#4863A0',pady=20,padx=150).grid(row=1,column=4)            
         button_1=Button(clas,image=img2,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)
         button_1.grid(row=0,column=4,sticky='E')
+        
         msg=('Enter the class : ')
         l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=2,column=1)
@@ -558,7 +543,7 @@ def delete():
                 cfrm.grid(row=1,column=0)
            
             
-    def rol():
+    def rol():  #delete roll wise
         global cls,roll,section
         clas=Toplevel(root)
         clas.attributes('-fullscreen', True)
@@ -732,19 +717,19 @@ def delete():
     def qt():
         opt.destroy()
 
-    button_1=Button(opt,image=img1,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)
+    button_1=Button(opt,image=img1,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)                     #choosing delete options
     button_1.grid(row=0,column=0,sticky='W',padx=50)
     spc=Label(opt,text=' ',pady=20,bg='#4863A0').grid(row=1,column=0)
-    button_1=Button(opt,text='Class - wise',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40,pady=10, command=cls)
+    button_1=Button(opt,text='Class - wise',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40,pady=10, command=cls)    #classwise
     button_1.grid(row=2,column=1)
     spc=Label(opt,text=' ',pady=20,bg='#4863A0').grid(row=3,column=0)   
-    button_2=Button(opt,text='Student - wise',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40,pady=10, command=rol)
+    button_2=Button(opt,text='Student - wise',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40,pady=10, command=rol)  #rollwise
     button_2.grid(row=4,column=1)
 
 
     
         
-def view():
+def view():     #view result
         global cls,roll,section
         
         clas=Toplevel(root)
@@ -768,7 +753,7 @@ def view():
 
         button_1=Button(clas,image=img1,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)
         button_1.grid(row=0,column=0,sticky='W',padx=50)
-        
+                                                                        #taking details
         msg=('Enter the class : ')
         l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=2,column=1)
@@ -820,6 +805,9 @@ def view():
             
         
 
+#main front screen
+
+
 button_1=Button(root,text='Create New result',bg='#98AFC7',bd=10,font=('Segoe Print',16),cursor='hand2',width=40,command=detail)
 button_2=Button(root,text='View result',bg='#98AFC7',bd=10,font=('Segoe Print',16),cursor='hand2',width=40,command=view)
 button_3=Button(root,text='Delete result',bg='#98AFC7',bd=10,font=('Segoe Print',16),cursor='hand2',width=40,command=delete)
@@ -836,7 +824,7 @@ def qt():
 button_4=Button(root,text='Quit',bg='#C24641',bd=5,font=('Segoe Print',10),cursor='hand2',width=10, command=qt)
 button_4.grid(row=8,column=0,columnspan=2,sticky='E')    
 
-def mrks():
+def mrks():                                             #grading rules
         global pa1,pa1f,pa2,pa2f,hylt,hylp,hylf,ft,fp,ftf,subject,grd,point,cgpa,prctg
         grd=[]
         point=0
@@ -876,28 +864,14 @@ def mrks():
             else:
                 grd.append('E2')
                 
-        cgpa=round(point/len(subject),2)
+        cgpa=round(point/len(subject),2)             #cgpa rule
         
-        prctg=round(cgpa*9.5,2)
+        prctg=round(cgpa*9.5,2)                      #percentage rule
         
-def form():
-    x=open('files/Available.txt','a+')
-    x.close
-    avl=open('files/Available.txt','r')
-    x=avl.read()
-    if 'files/Class_'+str(cls)+'_'+section+"Roll No: "+str(roll) in x:
-        err=Toplevel(root)
-        err.config(bg='#4863A0')
-        root.eval(f'tk::PlaceWindow {str(err)} center')
-        msg=('Result of Roll No: '+str(roll)+(' already exists\nUse "View Results" to see existing result.\nUse "Delete Result" to delete existing result before re-issuing Result.'))
-        l1=Label(err,text=msg,justify='left',padx=10,pady=10,font=('Times New Roman',15),fg='white',bg='#4863A0')
-        l1.pack()
-        def qt():
-            err.destroy()
-        ext=Button(err,text='OK',padx=10,pady=5,command=qt,cursor='hand2',bg='#98AFC7',bd=5,font=('Times New Roman',10),width=20)        
-        ext.pack()
+def form():                                          #form to take marks
+    
 
-    else:
+    if (check()):
         global subject
         
         form=Toplevel(root)
@@ -1044,7 +1018,7 @@ def form():
             s6=Label(form, text=subject[5],padx=100,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=15,column=6)
             b5=Entry(form, textvariable=m24,font=('Times New Roman',10),bg='#98AFC7',bd=3).grid(row=15,column=7)
 
-        def practical():
+        def practical():        #PRACTICAL MARKS
             x=float(m1.get())
             
             global pa1,pa1f,pa2,pa2f,hylt,hylp,hylf,ft,fp,ftf,subject
@@ -1194,7 +1168,7 @@ def form():
         Submit=Button(form, text='S U B M I T ', command=practical,cursor='hand2',bg='#98AFC7',bd=5,font=('Times New Roman',11),width=50)
         Submit.grid(row=20, column =0, columnspan=8)
 
-    def final():         
+    def final():         #saving the result
         global pa1,pa1f,pa2,pa2f,hylt,hylp,hylf,ft,fp,ftf,subject
         rslt=open('files/Class_'+str(cls)+'_'+str(section)+'.txt','a+')
         rslt.write('Roll No: '+str(roll)+'\n')
@@ -1226,6 +1200,26 @@ def form():
         avl.close()
         rslt.close()
        
+def check():
+            x=open('files/Available.txt','a+')
+            x.close
+            avl=open('files/Available.txt','r')
+            x=avl.read()
+            if 'files/Class_'+str(cls)+'_'+section+"Roll No: "+str(roll) in x:
+                err=Toplevel(root)
+                err.config(bg='#4863A0')
+                root.eval(f'tk::PlaceWindow {str(err)} center')
+                msg=('Result of Roll No: '+str(roll)+(' already exists\nUse "View Results" to see existing result.\nUse "Delete Result" to delete existing result before re-issuing Result.'))
+                l1=Label(err,text=msg,justify='left',padx=10,pady=10,font=('Times New Roman',15),fg='white',bg='#4863A0')
+                l1.pack()
+                def qt():
+                    err.destroy()
+                ext=Button(err,text='OK',padx=10,pady=5,command=qt,cursor='hand2',bg='#98AFC7',bd=5,font=('Times New Roman',10),width=20)        
+                ext.pack()
+                return False
+            else:
+                return True
+    
 
 mainloop()
 
