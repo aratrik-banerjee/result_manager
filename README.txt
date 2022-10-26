@@ -1,4 +1,12 @@
-Copy and paste all the folders and run "main.py"
+Download and put all the folders in a single folder and run "main.py"
 
-P.S: only executing main.py won't work unless all the files are copied
+Hierarchy:
+<Top folder>
+  -> files
+  -> images  
+  -> main.py
+  
+
+
+P.S: only executing main.py won't work unless all the files are correctly organized.
 
