@@ -223,13 +223,13 @@ def detail():               #taking details
                 
 
                 
-            sc1=Radiobutton(sci,text=s1,pady=10,variable=var,cursor='hand2',value=1,bg='#4863A0',font=('Freestyle Script',40), command=sub,fg='white')
+            sc1=Radiobutton(sci,text=s1,pady=10,variable=var,cursor='hand2',value=1,bg='#4863A0',font=('Segoe Print',20), command=sub,fg='white')
             sc1.grid(row=3,column=1,sticky='W')
-            sc2=Radiobutton(sci,text=s2,pady=10,variable=var,cursor='hand2',value=2,bg='#4863A0',font=('Freestyle Script',40), command=sub,fg='white')
+            sc2=Radiobutton(sci,text=s2,pady=10,variable=var,cursor='hand2',value=2,bg='#4863A0',font=('Segoe Print',20), command=sub,fg='white')
             sc2.grid(row=4,column=1,sticky='W')
-            sc3=Radiobutton(sci,text=s3,pady=10,variable=var,cursor='hand2',value=3, command=sub,font=('Freestyle Script',40),bg='#4863A0',fg='white')
+            sc3=Radiobutton(sci,text=s3,pady=10,variable=var,cursor='hand2',value=3, command=sub,font=('Segoe Print',20),bg='#4863A0',fg='white')
             sc3.grid(row=5,column=1,sticky='W')
-            sc4=Radiobutton(sci,text=s4,pady=10,variable=var,cursor='hand2',value=4, command=sub,font=('Freestyle Script',40),bg='#4863A0',fg='white')
+            sc4=Radiobutton(sci,text=s4,pady=10,variable=var,cursor='hand2',value=4, command=sub,font=('Segoe Print',20),bg='#4863A0',fg='white')
             sc4.grid(row=6,column=1,sticky='W')
             
             
@@ -283,11 +283,11 @@ def detail():               #taking details
                 
 
                 
-            cm1=Radiobutton(com,text=s1,pady=10,variable=var,cursor='hand2',value=1,bg='#4863A0', command=sub,font=('Freestyle Script',40),fg='white')
+            cm1=Radiobutton(com,text=s1,pady=10,variable=var,cursor='hand2',value=1,bg='#4863A0', command=sub,font=('Segoe Print',20),fg='white')
             cm1.grid(row=3,column=1,sticky='W')
-            cm2=Radiobutton(com,text=s2,pady=10,variable=var,cursor='hand2',value=2,bg='#4863A0', command=sub,font=('Freestyle Script',40),fg='white')
+            cm2=Radiobutton(com,text=s2,pady=10,variable=var,cursor='hand2',value=2,bg='#4863A0', command=sub,font=('Segoe Print',20),fg='white')
             cm2.grid(row=4,column=1,sticky='W')
-            cm3=Radiobutton(com,text=s3,pady=10,variable=var,cursor='hand2',value=3,bg='#4863A0', command=sub,font=('Freestyle Script',40),fg='white')
+            cm3=Radiobutton(com,text=s3,pady=10,variable=var,cursor='hand2',value=3,bg='#4863A0', command=sub,font=('Segoe Print',20),fg='white')
             cm3.grid(row=5,column=1,sticky='W')
             
         def arts():        #for arts stream
@@ -338,11 +338,11 @@ def detail():               #taking details
                 
 
                 
-            ar1=Radiobutton(art,text=s1,pady=10,variable=var,cursor='hand2',value=1,bg='#4863A0', command=sub,font=('Freestyle Script',40),fg='white')
+            ar1=Radiobutton(art,text=s1,pady=10,variable=var,cursor='hand2',value=1,bg='#4863A0', command=sub,font=('Segoe Print',20),fg='white')
             ar1.grid(row=3,column=1,sticky='W')
-            ar2=Radiobutton(art,text=s2,pady=10,variable=var,cursor='hand2',value=2,bg='#4863A0', command=sub,font=('Freestyle Script',40),fg='white')
+            ar2=Radiobutton(art,text=s2,pady=10,variable=var,cursor='hand2',value=2,bg='#4863A0', command=sub,font=('Segoe Print',20),fg='white')
             ar2.grid(row=4,column=1,sticky='W')
-            ar3=Radiobutton(art,text=s3,pady=10,variable=var,cursor='hand2',value=3,bg='#4863A0', command=sub,font=('Freestyle Script',40),fg='white')
+            ar3=Radiobutton(art,text=s3,pady=10,variable=var,cursor='hand2',value=3,bg='#4863A0', command=sub,font=('Segoe Print',20),fg='white')
             ar3.grid(row=5,column=1,sticky='W')
 
         
@@ -378,13 +378,13 @@ def detail():               #taking details
                 gp=Label(stream,bg='#4863A0',pady=20,padx=200).grid(row=2,column=0)
                 button_1=Button(stream,image=img1,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)
                 button_1.grid(row=1,column=0,sticky='W',padx=50)
-                com=Button(stream,text="SCIENCE",cursor='hand2',bg='#98AFC7',bd=10,font=('Freestyle Script',25),width=40, command=sci)
+                com=Button(stream,text="SCIENCE",cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',18),width=40, command=sci)
                 com.grid(row=3,column=1)
                 l=Label(stream,bg='#4863A0',pady=15).grid(row=4,column=0)
-                cmrs=Button(stream,text="COMMERCE",cursor='hand2',bg='#98AFC7',bd=10,font=('Freestyle Script',25),width=40, command=cmrs)
+                cmrs=Button(stream,text="COMMERCE",cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',18),width=40, command=cmrs)
                 cmrs.grid(row=5,column=1)
                 l=Label(stream,bg='#4863A0',pady=15).grid(row=6,column=0)
-                art=Button(stream,text="ARTS",cursor='hand2',bg='#98AFC7',bd=10,font=('Freestyle Script',25),width=40, command=arts)
+                art=Button(stream,text="ARTS",cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',18),width=40, command=arts)
                 art.grid(row=7,column=1)    
 
         elif (cls<11) and (cls>5):
@@ -418,22 +418,22 @@ def detail():               #taking details
     button_1=Button(detail,image=img1,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)
     button_1.grid(row=4,column=0,sticky='W',padx=50)
     
-    Name=Label(detail,text='Name',bg='#4863A0',font=('Freestyle Script',45),fg='white').grid(row=6,column=1)
+    Name=Label(detail,text='Name',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=6,column=1)
     e1=Entry(detail,textvariable = name_var,font=(15),bg='#98AFC7',bd=5).grid(row=6,column=2,ipady=5)
     
     
-    Class=Label(detail,text='Class',bg='#4863A0',font=('Freestyle Script',45),fg='white').grid(row=7,column=1)
+    Class=Label(detail,text='Class',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=7,column=1)
     e2=Entry(detail,textvariable = cls_var,font=(15),bg='#98AFC7',bd=5).grid(row=7,column=2,ipady=5)
     
-    Roll_No=Label(detail,text='Roll No.',bg='#4863A0',font=('Freestyle Script',45),fg='white').grid(row=8,column=1)
+    Roll_No=Label(detail,text='Roll No.',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=8,column=1)
     e3=Entry(detail,textvariable = roll_var,font=(15),bg='#98AFC7',bd=5).grid(row=8,column=2,ipady=5)
 
-    Section=Label(detail,text='Section',bg='#4863A0',font=('Freestyle Script',45),fg='white').grid(row=9,column=1)
+    Section=Label(detail,text='Section',bg='#4863A0',font=('Segoe Print',30),fg='white').grid(row=9,column=1)
     e4=Entry(detail,textvariable = section_var,font=(15),bg='#98AFC7',bd=5).grid(row=9,column=2,ipady=5)
 
     gp=Label(detail,bg='#4863A0',pady=20).grid(row=10,column=0)
 
-    button_4=Button(detail,text='Submit',cursor='hand2',bg='#98AFC7',bd=10,font=('Freestyle Script',25),width=40, command=subject)
+    button_4=Button(detail,text='Submit',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40, command=subject)
     button_4.grid(row=11,column=1,columnspan=2)
     
 
@@ -474,11 +474,11 @@ def delete():
         button_1=Button(clas,image=img2,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)
         button_1.grid(row=0,column=4,sticky='E')
         msg=('Enter the class : ')
-        l1=Label(clas,text=msg,padx=10,pady=10,font=('Freestyle Script',45),bg='#4863A0',fg='white')
+        l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=2,column=1)
 
         msg=('Enter the Section : ')
-        l1=Label(clas,text=msg,padx=10,pady=10,font=('Freestyle Script',45),bg='#4863A0',fg='white')
+        l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=3,column=1)
 
         def sbmt():
@@ -589,15 +589,15 @@ def delete():
         button_1.grid(row=0,column=4,sticky='E')
 
         msg=('Enter the class : ')
-        l1=Label(clas,text=msg,padx=10,pady=10,font=('Freestyle Script',45),bg='#4863A0',fg='white')
+        l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=2,column=1)
 
         msg=('Enter the Section : ')
-        l1=Label(clas,text=msg,padx=10,pady=10,font=('Freestyle Script',45),bg='#4863A0',fg='white')
+        l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=3,column=1)
 
         msg=('Enter the Roll No: ')
-        l1=Label(clas,text=msg,padx=10,pady=10,font=('Freestyle Script',45),bg='#4863A0',fg='white')
+        l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=4,column=1)
 
         def sbmt():
@@ -735,10 +735,10 @@ def delete():
     button_1=Button(opt,image=img1,cursor='hand2',bg='#4863A0',font=('Times New Roman',15), command=qt)
     button_1.grid(row=0,column=0,sticky='W',padx=50)
     spc=Label(opt,text=' ',pady=20,bg='#4863A0').grid(row=1,column=0)
-    button_1=Button(opt,text='Class - wise',cursor='hand2',bg='#98AFC7',bd=10,font=('Freestyle Script',25),width=40,pady=10, command=cls)
+    button_1=Button(opt,text='Class - wise',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40,pady=10, command=cls)
     button_1.grid(row=2,column=1)
     spc=Label(opt,text=' ',pady=20,bg='#4863A0').grid(row=3,column=0)   
-    button_2=Button(opt,text='Student - wise',cursor='hand2',bg='#98AFC7',bd=10,font=('Freestyle Script',25),width=40,pady=10, command=rol)
+    button_2=Button(opt,text='Student - wise',cursor='hand2',bg='#98AFC7',bd=10,font=('Segoe Print',15),width=40,pady=10, command=rol)
     button_2.grid(row=4,column=1)
 
 
@@ -770,15 +770,15 @@ def view():
         button_1.grid(row=0,column=0,sticky='W',padx=50)
         
         msg=('Enter the class : ')
-        l1=Label(clas,text=msg,padx=10,pady=10,font=('Freestyle Script',45),bg='#4863A0',fg='white')
+        l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=2,column=1)
 
         msg=('Enter the Section : ')
-        l1=Label(clas,text=msg,padx=10,pady=10,font=('Freestyle Script',45),bg='#4863A0',fg='white')
+        l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=3,column=1)
 
         msg=('Enter the Roll No: ')
-        l1=Label(clas,text=msg,padx=10,pady=10,font=('Freestyle Script',45),bg='#4863A0',fg='white')
+        l1=Label(clas,text=msg,padx=10,pady=10,font=('Segoe Print',20),bg='#4863A0',fg='white')
         l1.grid(row=4,column=1)
 
         def sbmt():
@@ -820,9 +820,9 @@ def view():
             
         
 
-button_1=Button(root,text='Create New result',bg='#98AFC7',bd=10,font=('Freestyle Script',25),cursor='hand2',width=40,command=detail)
-button_2=Button(root,text='View result',bg='#98AFC7',bd=10,font=('Freestyle Script',25),cursor='hand2',width=40,command=view)
-button_3=Button(root,text='Delete result',bg='#98AFC7',bd=10,font=('Freestyle Script',25),cursor='hand2',width=40,command=delete)
+button_1=Button(root,text='Create New result',bg='#98AFC7',bd=10,font=('Segoe Print',16),cursor='hand2',width=40,command=detail)
+button_2=Button(root,text='View result',bg='#98AFC7',bd=10,font=('Segoe Print',16),cursor='hand2',width=40,command=view)
+button_3=Button(root,text='Delete result',bg='#98AFC7',bd=10,font=('Segoe Print',16),cursor='hand2',width=40,command=delete)
 button_1.grid(row=2,column=0)
 l=Label(root,bg='#4863A0').grid(row=3,column=0)
 button_2.grid(row=4,column=0)
@@ -947,11 +947,11 @@ def form():
         hdng1.photo=img
         hdng1.grid(row=0,column=1, columnspan=6)
             
-        hdng2=Label(form, text='Periodic Assessment 1' ,bg='#4863A0',font=('Freestyle Script',35),fg='yellow')    #Periodic Assessment 1
+        hdng2=Label(form, text='Periodic Assessment 1' ,bg='#4863A0',font=('Segoe Print',20),fg='yellow')    #Periodic Assessment 1
         hdng2.grid(row=1,column=1, columnspan=6)
 
         hdng3=Label(form, text='M.M: 25' )    
-        hdng3.config(font=('Freestyle Script',25),fg='yellow',bg='#4863A0')
+        hdng3.config(font=('Segoe Print',15),fg='yellow',bg='#4863A0')
         hdng3.grid(row=1,column=7)
 
         s1=Label(form, text=subject[0],padx=100,pady=5,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=2,column=0)
@@ -970,12 +970,12 @@ def form():
             s6=Label(form, text=subject[5],padx=100,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=3,column=6)
             b6=Entry(form, textvariable=m6,font=('Times New Roman',10),bg='#98AFC7',bd=3).grid(row=3,column=7)
 
-        hdng3=Label(form, text='Half Yearly Theory' ,bg='#4863A0',font=('Freestyle Script',35),fg='yellow',padx=100 )       #Half Yearly Theory
+        hdng3=Label(form, text='Half Yearly Theory' ,bg='#4863A0',font=('Segoe Print',20),fg='yellow',padx=100 )       #Half Yearly Theory
         
         hdng3.grid(row=4,column=1, columnspan=6)
 
         hdng4=Label(form, text='M.M: 70' )    
-        hdng4.config(font=('Freestyle Script',25),fg='yellow',bg='#4863A0')
+        hdng4.config(font=('Segoe Print',15),fg='yellow',bg='#4863A0')
         hdng4.grid(row=4,column=7)
 
         s1=Label(form, text=subject[0],padx=100,pady=5,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=5,column=0)
@@ -996,12 +996,12 @@ def form():
 
         
 
-        hdng5=Label(form, text='Periodic Assessment 2'  ,bg='#4863A0',font=('Freestyle Script',35),fg='yellow',padx=100)        #Periodic Assessment 2
+        hdng5=Label(form, text='Periodic Assessment 2'  ,bg='#4863A0',font=('Segoe Print',20),fg='yellow',padx=100)        #Periodic Assessment 2
         
         hdng5.grid(row=10,column=1, columnspan=6)
 
         hdng6=Label(form, text='M.M: 25' )    
-        hdng6.config(font=('Freestyle Script',25),fg='yellow',bg='#4863A0')
+        hdng6.config(font=('Segoe Print',15),fg='yellow',bg='#4863A0')
         hdng6.grid(row=10,column=7)
 
         s1=Label(form, text=subject[0],padx=100,pady=5,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=11,column=0)
@@ -1021,11 +1021,11 @@ def form():
             s6=Label(form, text=subject[5],padx=100,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=12,column=6)
             b6=Entry(form, textvariable=m18,font=('Times New Roman',10),bg='#98AFC7',bd=3).grid(row=12,column=7)
             
-        hdng6=Label(form, text='Annual Exam Theory' ,bg='#4863A0',font=('Freestyle Script',35),fg='yellow',padx=100 )           #Annual Exam
+        hdng6=Label(form, text='Annual Exam Theory' ,bg='#4863A0',font=('Segoe Print',20),fg='yellow',padx=100 )           #Annual Exam
         hdng6.grid(row=13,column=1, columnspan=6)
 
         hdng7=Label(form, text='M.M: 70' )    
-        hdng7.config(font=('Freestyle Script',25),fg='yellow',bg='#4863A0')
+        hdng7.config(font=('Segoe Print',15),fg='yellow',bg='#4863A0')
         hdng7.grid(row=13,column=7)
 
         s1=Label(form, text=subject[0],padx=100,pady=5,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=14,column=0)
@@ -1098,12 +1098,12 @@ def form():
             hdng4.grid(row=0,column=1, columnspan=4)
 
             
-            hdng5=Label(prc, text='Half Yearly Practical/Project' ,padx=100,pady=5,font=('Freestyle Script',35),fg='yellow',bg='#4863A0',bd=5)
+            hdng5=Label(prc, text='Half Yearly Practical/Project' ,padx=100,pady=5,font=('Segoe Print',20),fg='yellow',bg='#4863A0',bd=5)
             
             hdng5.grid(row=2,column=0, columnspan=6)
             
             hdng6=Label(prc, text='M.M: 20' )
-            hdng6.config(padx=10,pady=20,font=('Freestyle Script',35),fg='yellow',bg='#4863A0',bd=5)
+            hdng6.config(padx=10,pady=20,font=('Segoe Print',20),fg='yellow',bg='#4863A0',bd=5)
             hdng6.grid(row=2,column=5)
 
             s1=Label(prc, text=subject[0],padx=100,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=3,column=0)
@@ -1122,12 +1122,12 @@ def form():
                 s6=Label(prc, text=subject[5],padx=50,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=4,column=4)
                 b6=Entry(prc, textvariable=m30,font=('Times New Roman',10),bg='#98AFC7',bd=3).grid(row=4,column=5)
 
-            hdng7=Label(prc, text='Annual Exam Practical/Project',padx=100,pady=5 ,font=('Freestyle Script',35),fg='yellow',bg='#4863A0',bd=5)
+            hdng7=Label(prc, text='Annual Exam Practical/Project',padx=100,pady=5 ,font=('Segoe Print',20),fg='yellow',bg='#4863A0',bd=5)
             
             hdng7.grid(row=5,column=0, columnspan=6)
 
             hdng8=Label(prc, text='M.M: 20' )
-            hdng8.config(padx=100,pady=20,font=('Freestyle Script',35),fg='yellow',bg='#4863A0',bd=5)
+            hdng8.config(padx=100,pady=20,font=('Segoe Print',20),fg='yellow',bg='#4863A0',bd=5)
             hdng8.grid(row=5,column=5)
 
             s1=Label(prc, text=subject[0],padx=50,font=('Times New Roman ',15),fg='white',bg='#4863A0',bd=5).grid(row=6,column=0)
